@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="container">
+
+            <div id="info">
+                <img id="product" src="pic/espresso.jpg" />
+            </div>
+
+            <div id="payment">
+
+                <form id="checkout">
+
+                    <input class="card" id="visa" type="button" name="card" value="">
+                    <input class="card" id="mastercard" type="button" name="card" value="">
+
+                    <label>信用卡卡號</label>
+                    <input class="cardnumber" id="cardnumber"  type="text" placeholder="請輸入信用卡卡號" maxlength="15">
+
+                    <label>請輸入金額</label>
+                    <input id="cardholder" type="text" name="name" requierd="true" maxlength="3" placeholder="只能輸入數字且開頭不能為0" required="required" oninput="value=value.replace(/[^\d]|^[0]/g,'')"
+                    onkeyup="clearNoNum(this)"/>
+
+                    <input class="btn" type="button" name="purchase" value="送出" onClick="checkCreditCard(myform.selectCard.value, creditCardNumber.value)" >
+                    <input class="btn" type="button" name="purchase" value="回首頁"  onclick="location.href='home.html'" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

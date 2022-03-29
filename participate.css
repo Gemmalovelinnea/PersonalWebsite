@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+
+.header {
+    height: 68px;
+    background-color: white;
+    box-shadow: 0 8px 6px -6px lightgrey;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.menu_btn {
+    width: 59px;
+    height: 59px;
+    background-color: #f5f5dc;
+    display: block;
+    position: absolute;
+    top: -1px;
+    padding-top: 10px;
+    right: 5px;
+}
+
+.menu_btn span {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.menu_btn::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 5px;
+    right: 10px;
+    width: 50px;
+    background-color: #794715;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 15px 0px #794715,
+        0px -15px 0px #794715;
+}
+
+nav {
+    width: 80%;
+    height: calc(100vh - 80px);
+    background-color: #f5f5dc;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    transition: .5s;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #794715;
+    padding: 10px 20px;
+    transform: .5s;
+    border-bottom: 1px solid #794715;
+}
+
+.charity {
+    color: crimson;
+    font-weight: bold;
+}
+
+#menu_control:checked~.header nav {
+    left: 0;
+}
+
+.join {
+    text-align: center;
+}
+
+.joinUs {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.rescue {
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.row {
+    margin: auto;
+    background-color: #f5f5dc;
+    width: 80%;
+    padding: 20px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+#currentlyDontion {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    line-height: 30px;
+}
+
+
+#currentlyDonationAmount {
+    font-size: 50px;
+}
+
+#sponser {
+    padding-top: 5px;
+    margin: auto;
+}
+
+#sponser img {
+    width: 100%;
+}
+
+#quantity {
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+.join {
+    text-align: center;
+}
+
+.joinUs {
+    padding-top: 80px;
+    text-align: center;
+    border-radius: 15px/100px;
+}
+
+.participate {
+
+    width: 15%;
+}
+
+.rescue {
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 50px;
+    border-style: groove
+}
+
+.volunteer {
+    background-color: #f5f5dc;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 15px/100px;
+}
+
+
+.volunteer h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+form {
+    background-color: #f5f5dc;
+    margin-top: 20px;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 30px;
+    border-radius: 15px/100px;
+}
+
+
+#currentlyVolunteerQuantity {
+    font-size: 50px;
+}
+
+form h2 {
+    text-align: center;
+
+}
+
+.gap_80 {
+    height: 20px;
+}
+
+.footer {
+    background-color: beige;
+    box-shadow: 0 10px 8px 20px lightgrey;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.contact {
+    top: 20px;
+    width: 100%;
+}
+
+
+@media screen and (min-width:1200px) {
+    .menu_btn {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 5;
+    }
+
+    nav {
+        position: relative;
+        left: 0;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: 0;
+        align-items: center;
+        background-color: white;
+    }
+
+    nav a {
+        border-bottom: none;
+    }
+
+    .row {
+    margin: 0 auto;
+    background-color: #f5f5dc;
+    width: 80%;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+    #currentlyDontion {
+        text-align: center;
+        width: 30%;
+        line-height: 30px;
+    }
+
+
+    #sponser {
+        padding-top: 5px;
+        width: 30%;
+    }
+
+
+    .quantity{
+        width:30%;
+        border: solid 1px blue;
+    }
+    .join {
+        text-align: center;
+    }
+
+    .joinUs {
+        padding-top: 80px;
+        text-align: center;
+        border-radius: 15px/100px;
+    }
+
+    .participate {
+
+        width: 15%;
+    }
+
+    .rescue {
+        display: inline-block;
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+        padding-left: 50px;
+        border-style: groove
+    }
+
+    .volunteer {
+        background-color: #f5f5dc;
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+        line-height: 30px;
+        padding: 20px;
+        border-radius: 15px/100px;
+    }
+
+
+    .volunteer h2 {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    form {
+        background-color: #f5f5dc;
+        margin-top: 20px;
+        padding: 20px;
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+        line-height: 30px;
+        border-radius: 15px/100px;
+    }
+
+    form h2 {
+        text-align: center;
+
+    }
+
+}

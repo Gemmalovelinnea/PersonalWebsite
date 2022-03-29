@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+
+.header {
+    height: 68px;
+    background-color: white;
+    box-shadow: 0 8px 6px -6px lightgrey;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.menu_btn {
+    width: 59px;
+    height: 59px;
+    background-color: #f5f5dc;
+    display: block;
+    position: absolute;
+    top: -1px;
+    padding-top: 10px;
+    right: 5px;
+}
+
+.menu_btn span {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.menu_btn::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 5px;
+    right: 10px;
+    width: 50px;
+    background-color: #794715;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 15px 0px #794715,
+        0px -15px 0px #794715;
+}
+
+nav {
+    width: 80%;
+    height: calc(100vh - 80px);
+    background-color: #f5f5dc;
+    position: absolute;
+    margin-left: 700px;
+    top: 70px;
+    left: -100%;
+    transition: .5s;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #794715;
+    padding: 10px 20px;
+    transform: .5s;
+    border-bottom: 1px solid #794715;
+}
+
+.container{
+    max-width: 1200px;
+}
+
+.charity{
+    color: rgb(230, 110, 13);
+    font-weight: bold;
+}
+#menu_control:checked~.header nav {
+    left: 0;
+}
+
+
+.item {
+    background-color: #FFE5B4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 100px;
+    height: 80%;
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+#top {
+    /* border: 1px solid saddlebrown; */
+    height: 60%;
+    bottom: -45px;
+}
+
+.pic {
+    width: 200%;
+    height:200px;
+    position: relative;
+    bottom: -5px;
+    /* border: solid 1px red; */
+}
+
+#shiba img{
+    width:60%;
+    height: 231px;
+    margin: -20px;
+    margin-top: -25px;
+    margin-bottom: -5px;
+    border-radius: 10px 0 0 10px;
+}
+
+#mix img{
+    width:60%;
+    height: 235px;
+    margin: -20px;
+    margin-top: -28px;
+    margin-bottom: 15px;
+    border-radius: 10px 0 0 10px;
+} 
+
+#husky img{
+    width:60%;
+    height: 232px;
+    margin-top: -25px;
+    margin-left: -20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.txt {
+    width: 100%;
+    margin: auto;
+    line-height: 25px;
+    margin-left: -100px;
+}
+
+.gap_20 {
+    height: 20px;
+}
+
+.gap_80 {
+    height: 100px;
+}
+
+.footer {
+        max-width: 1600px;
+        background-color: beige;
+        box-shadow: 0 10px 8px 20px lightgrey;
+        padding: 20px;
+        font-size: 15px;
+    }
+.foot{
+    width: 100%;
+}
+
+.contact {
+    top: 20px;
+    width: 100%;
+}
+
+@media screen and (min-width:1200px) {
+    .menu_btn {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 5;
+    }
+
+    nav {
+        position: relative;
+        left: 0;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: 0;
+        align-items: center;
+        background-color: white;
+    }
+
+    nav a {
+        border-bottom: none;
+    }
+
+    .item {
+        background-color: #FFE5B4;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 80px;
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    #top {
+        /* border: 1px solid saddlebrown; */
+        height: 60%;
+        bottom: 20px;
+    }
+
+    .pic {
+        margin-top: 20px;
+        margin: auto;
+        width: 100%;
+        height: 90%;
+        position: relative;
+    }
+
+    #shiba img{
+        width:60%;
+        height: 300px;
+        margin: -20px;
+        margin-top: -38px;
+        border-radius: 10px 0 0 10px;
+    }
+    
+    #mix img{
+        width:70%;
+        height: 300px;
+        margin: -20px;
+        margin-top: -40px;
+        margin-bottom: 15px;
+        border-radius: 10px 0 0 10px;
+    } 
+    
+    #husky img{
+        width:70%;
+        height: 300px;
+        margin-top: -38px;
+        margin-left: -20px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .footer {
+        max-width: 1600px;
+        background-color: beige;
+        box-shadow: 0 10px 8px 20px lightgrey;
+        padding: 20px;
+        font-size: 15px;
+    }
+    .foot{
+        width: 100%;
+    }
+    .contact {
+        top: 20px;
+        width: 100%;
+    }
+}

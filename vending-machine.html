@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee vending machine</title>
+  <script src="coffee.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <input type="checkbox" name="" id="menu_control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="home.html"><img src="pic/DOG.png" alt=""></a>
+            </h1>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+            <nav>
+              <a href="donation.html" class="list-of-donate">捐款</a>
+              <a href="participate.html">參與我們</a>
+                <a href="adoption.html">寵物認養</a>
+                <a href="vending-machine.html" class="charity">義賣</a>
+            </nav>
+            <div class="pet_adoption"></div>
+        </div>
+  <div class="section">
+    <div class="container">
+      <h1>咖啡義賣</h1>
+      <div class="container-right">
+        <div class="coffeprice" id="screen"></div>
+        <button id="ok" onclick="location.href='checkout.html'">
+          <img src="pic/pngegg.png" alt="insert-coin" />
+        </button>
+      </div>
+      <div class="vending">
+        <div class="type">
+          <div class="coffebuttons">
+            <button id="Typica"><img src="pic/Typica.jpg" width="70" height="100"></button>
+            <p>Typica 咖啡</p>
+            <p>NT$150</p>
+          </div>
+          <div class="coffebuttons"><button id="espresso"><img src="pic/espresso.jpg" width="70" height="100"></button>
+            <p>espresso咖啡</p>
+            <p>NT$100</p>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="type">
+          <div class="coffebuttons">
+            <button id="liberica"><img src="pic/liberica.jpg" width="70" height="100"></button>
+            <p>liberica咖啡</p>
+            <p>NT$120</p>
+          </div>
+          <div class="coffebuttons"><button id="Robusta"><img src="pic/Robusta.jpg" width="70" height="100"></button>
+            <p>Robusta咖啡</p>
+            <p>NT$130</p>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="type">
+          <div class="coffebuttons">
+            <button id="brazil"><img src="pic/brazil.jpg" width="70" height="100"></button>
+            <p>Brazil咖啡</p>
+            <p>NT$150</p>
+          </div>
+          <div class="coffebuttons"><button id="mocha"><img src="pic/mocha.jpg" width="70" height="100"></button>
+            <p>Mocha咖啡</p>
+            <p>NT$150</p>
+          </div>
+        </div>
+      </div>
+      <div class="trapezoid">
+      </div>
+      <!-- <div class="coffeeimg">
+        <img src="pic/iconmonstr-coffee-15.svg" alt="cofeeCap" />
+      </div> -->
+      <!-- <div class="questionmoney">
+        <label class='labelCash' for="cash">Insert money</label>
+        <input type="number" name="moneyask" id="cash" />
+      </div> -->
+
+
+      <!-- <button id="cancel">
+          <img src="pic/cancel.png" alt="cancel" />
+        </button> -->
+      <!-- <div class="change">
+        <div>Change:</div>
+        <div id="change-amount"></div>
+      </div> -->
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="participate.css">
+    <style>
+        
+    </style>
+</head>
+
+<body onload="load()">
+    <div class="wrap">
+        <input type="checkbox" name="" id="menu_control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="home.html"><img src="pic/DOG.png" alt=""></a>
+            </h1>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+            <nav>
+                <a href="donation.html" class="list-of-donate">捐款</a>
+                <a href="adoption.html">寵物認養</a>
+                <a href="participate.html">參與我們</a>
+                <a href="vending-machine.html" class="charity">義賣</a>
+            </nav>
+        </div>
+
+        <h1 class="joinUs">參與我們</h1>
+        <div class="join">
+            <img class="participate" src="pic/join.png" alt="">
+            <img class="rescue" src="pic/rescue.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-4" id="currentlyDontion">
+                    <p id='currentlyDonationAmount' class="currentlyDobationSum">0</ㄎid=>
+                    <p>萬元</p>
+                    <p>目前捐款金額</p>
+                </div>
+                <div class="col-12 col-xl-4" id="sponser">
+                    <img src="sponser.JPG" alt="">
+                </div>
+                <div class="col-12 col-xl-4" id="quantity">
+                    <p id='currentlyVolunteerQuantity' class="currentlyVolunteerQuantity text-light">0</p>
+                    <p class="currentlyVolunteer">目前參與志工人數</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="volunteer">
+        <h2>志工</h2>
+        <h3>如果您愛狗，而且也想要妥善運用您的愛狗超能力，我們正在徵詢以下類型的志工：​</h3>
+        <ol>
+            <li>狗狗社會化和訓練員</li>
+            <li>創意寫作（中英文）</li>
+            <li>活動組織和管理</li>
+            <li>安置狗狗（需要自備車輛</li>
+            <li>攝影或影片製作</li>
+        </ol>
+    </div>
+    <form action="participate.html" name="participate_form">
+        <h2>如果有興趣請填寫下面申請表</h2>
+        <label for="person">姓名</label><br>
+        <input type="text" id="person" name="person" placeholder="XXX"><br>
+        <label for="email">電子郵件</label><br>
+        <input type="text" name=email size=20 placeholder="xxxx@xxxx"><br>
+        <label for="contact_number">手機號碼</label><br>
+        <input type="tel" id="contact_number" name="contact_number" maxlength="10"><br>
+        性別<br>
+        <label for="male">男</label>
+        <input id="gender" name="gender" type="radio" value="yes" id="male">
+        <label for="female">女
+        </label>
+        <input name="gender" type="radio" value="no" id="female"><br>
+        <p>請問你對以下哪幾種志工有興趣</p>
+        <input type="checkbox" id="assistant" value="first_checkbox">
+        <label for="chbox1">協助園區圍欄修繕、改造、除草等</label> <br>
+        <input type="checkbox" id="photo" value="first_checkbox">
+        <label for="chbox2">狗狗攝影師:拍攝待領養狗狗照片及影片</label> <br>
+        <input type="checkbox" id="trainer" value="first_checkbox">
+        <label for="chbox3">狗狗訓練:協助狗狗社會化、熟悉陌生人</label> <br>
+        <input type="checkbox" id="volunteer" value="first_checkbox">
+        <label for="chbox4">活動志工:活潑外向，能夠在活動中在現場幫忙介紹待領養的狗狗</label>
+        <P><input type="button" value="送出" onClick="(this.form)">
+    </form>
+    
+    <div class="gap_80"></div>
+    <div class="footer">
+        <h3 class="contact">聯絡我們: </h3>
+        <p>地址:台北市大安區師大路1號1樓</p>
+        <p>電話:091234567</p>
+        <p>email:lisa0821@gmail.com</p>
+        <p class="p_space"> </p>
+        <p>此網頁僅供TibaMe專題教學使用</p>
+        <p>©All Rights Reserved</p>
+    </div>
+    <script src="participate.js">
+    </script>
+</body>
+
+</html>

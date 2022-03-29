@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="donation.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <input type="checkbox" name="" id="menu_control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="home.html"><img src="pic/DOG.png" alt=""></a>
+            </h1>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+            <nav>
+                <a href="donation.html" class="list-of-donate">捐款</a>
+                <a href="participate.html">參與我們</a>
+                <a href="adoption.html">寵物認養</a>
+                <a href="vending-machine.html" class="charity">義賣</a>
+            </nav>
+        </div>
+        <div class="banner">
+            <div class="dog_picture">
+                <img src="pic/donation.banner.jpg" alt="">
+                <div class="banner-content">
+                    <h1>捐款支持</h1>
+                    <p>
+                        因為有您的支持，我們得以支付250隻狗狗的食物、居住環境維護、醫療照護、訓練以及協助狗狗尋找到屬於他們永遠的家。</p>
+                </div>
+            </div>
+        </div>
+        <div class="avoid-to-defraud">
+            <h2>防詐騙提醒</h2>
+            <p>親愛的捐款者，您好：</p>
+            <p>近期社福界發生多起捐款詐騙事件，提醒各位捐款人，</p>
+            <ol>
+                <h3>愛狗樂園</h3>
+                <li>
+                    1. 不會在『非』服務時間致電給您；
+                </li>
+                <li>
+                    2. 不會要求您變更捐款扣款方式、操作ATM或網路銀行；
+                </li>
+                <li>
+                    3. 不會主動索取往來銀行電話、信用卡號等金融資料。
+                </li>
+            </ol>
+        </div>
+    </div>
+    <form action="participate.html" name="participate_form">
+        <h2>如果要捐款請填寫捐款資料</h2>
+        <div class="label">
+            <label for="person">姓名</label><br>
+            <input type="text" id="person" name="person" placeholder="XXX"><br>
+            <label for="email">電子郵件</label><br>
+            <input type="text" name=email size=20 placeholder="xxxx@xxxx"><br>
+            <label for="contact_number">手機號碼</label><br>
+            <input type="tel" id="contact_number" name="contact_number" maxlength="10"><br>
+            <label for="contact_number">卡號</label><br>
+            <input type="text" name=cardNumber size=20 value="xxxx-xxxx-xxxx-xxxx"><br>
+            <div class="submit"><input type=button VALUE="送出" onClick="validForm(this.form)" ></div>
+        </div>
+    </form>
+    <div class="marquee-wrapper">
+        <h2>贊助商</h2>
+        <div class="marquee">
+            <img src="pic/audrey.jpg">
+            <img src="pic/computer-logo-design.jpg">
+            <img src="pic/Expert-Lab-logo-preview.jpg">
+            <img src="pic/game.jpg">
+            <img src="pic/lance.jpg">
+            <img src="pic/lion-head-logo.jpg">
+            <img src="pic/never.jpg">
+            <img src="pic/safi.jpg">
+            
+        </div>
+    </div>
+    <div class="gap_80"></div>
+    <div class="footer">
+        <h3 class="contact">聯絡我們: </h3>
+        <p>地址:台北市大安區師大路1號1樓</p>
+        <p>電話:091234567</p>
+        <p>email:lisa0821@gmail.com</p>
+        <p class="p_space"> </p>
+        <p>此網頁僅供TibaMe專題教學使用</p>
+        <p>©All Rights Reserved</p>
+    </div>
+    
+    <script>
+        function checkName(control) {
+            if (control.value == "") {
+                alert("請填寫姓名")
+                return (false);
+            }
+            return (true);
+        }
+
+        function checkEmail(email) {
+            index = email.indexOf('@', 0);
+            if (email.length == 0) {
+                alert("請輸入電子郵件地址！");
+                return (false);
+            } else if (index == -1) {
+                alert("錯誤：必須包含「@」。");
+                return (false);
+            } else if (index == 0) {
+                alert("錯誤：「@」之前不可為空。");
+                return (false);
+            } else if (index == email.length - 1) {
+                alert("錯誤：「@」之後不可為空。");
+                return (false);
+            } else
+                return (true);
+        }
+        function isNumericValidate(s) {
+            // var validChars = new Array("0123456789");
+            // 宣告一個陣列，並把 0 - 9 裝進去
+            var validChars = new Array(10);
+            // 把引數 s 的每個數字用迴圈分別比較陣列，
+            for (var i = 0; i <= 9; i++) {
+                validChars[i] = i;
+            }
+            // 如果全部都是數字則回傳對的，否則則是錯的
+            for (let i = 0; i < s.length; i++) {
+                const found = validChars.find(c => c == s[i]);
+                if (found === undefined) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function isHeadTwoValidate(number) {
+            return number[0] == 0 && number[1] == 9;
+        }
+
+        function checkContactNumber(contactNumber) {
+            if (contactNumber.value.length != 10) {
+                alert("請輸入正確手機號碼")
+                return (false);
+            } else if (!isNumericValidate(contactNumber.value)) {
+                alert("手機號碼只能為數字！");
+                return (false);
+            } else if (!isHeadTwoValidate(contactNumber.value)) {
+                alert("手機只能09開頭")
+                return (false);
+            } else
+                return (true);
+        }
+
+        function validForm(form) {
+            if (!checkName(form.person)) return;
+            if (!checkEmail(form.email.value)) return;
+            if (!checkContactNumber(form.contact_number)) return;
+            document.participate_form.submit();
+        }
+    </script>
+</body>
+
+</html>
